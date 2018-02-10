@@ -1,6 +1,6 @@
 import React from 'react';
 import { storiesOf } from '@storybook/react';
-import { withKnobs, number } from '@storybook/addon-knobs/react';
+import { withKnobs, number, text } from '@storybook/addon-knobs/react';
 import { data } from './CustomKnobs';
 import { action } from '@storybook/addon-actions';
 
@@ -12,6 +12,7 @@ storiesOf('Charts', module)
     <BubbleChart
       width={number('Width', 800)}
       height={number('Height', 800)}
+      fontFamily={text('Font Family', 'Arial')}
       data={data([
         { label: 'CRM', value: 1 },
         { label: 'API', value: 1 },
