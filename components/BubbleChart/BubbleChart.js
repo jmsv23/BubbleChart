@@ -21,7 +21,13 @@ export default class BubbleChart extends Component {
   }
 
   componentDidUpdate() {
-    this.renderChart();
+    const {
+      width,
+      height,
+    } = this.props;
+    if(width !== 0 && height !== 0) {
+      this.renderChart();
+    }
   }
 
   render() {
