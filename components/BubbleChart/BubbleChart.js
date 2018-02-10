@@ -61,6 +61,7 @@ export default class BubbleChart extends Component {
 
     const root = d3.hierarchy({children: data})
     .sum(function(d) { return d.value + (d.value * .16); })
+    .sort(function(a, b) { return b.value - a.value; })
     .each((d) => {
       if(d.data.label) {
         d.label = d.data.label;
